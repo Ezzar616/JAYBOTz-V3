@@ -182,7 +182,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            hydratedButtons: [{
              urlButton: {
                displayText: '✏️ S̺͆o̺͆u̺͆r̺͆c̺͆e̺͆ C̺͆o̺͆d̺͆e̺͆',
-               url: 'wa.me/6285162778904'
+               url: 'https://linkr.bio/JAYBOTz'
              }
 
            },
