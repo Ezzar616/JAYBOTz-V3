@@ -36,7 +36,7 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
 handler.help = ['mp3', 'a'].map(v => 'yt' + v + ` <url> <without message>`)
 handler.tags = ['downloader']
 handler.command = /^yt(a|mp3)$/i
-
+handler.private = true
 handler.exp = 0
 
 module.exports = handler*/
@@ -70,8 +70,8 @@ handler.command = /^yt(a|mp3)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
-handler.group = true
-handler.private = false
+handler.group = false
+handler.private = true
 
 handler.admin = false
 handler.botAdmin = false

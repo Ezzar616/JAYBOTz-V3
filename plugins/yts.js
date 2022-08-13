@@ -23,6 +23,7 @@ handler.help = ['', 'earch'].map(v => 'yts' + v + ' <pencarian>')
 handler.tags = ['tools']
 handler.command = /^yts(earch)?$/i
 
+handler.private = true
 module.exports = handler*/
 
 
@@ -51,6 +52,6 @@ handler.help = ['', 'earch'].map(v => 'yts' + v + ' <pencarian>')
 handler.tags = ['tools']
 handler.command = /^yts(earch)?$/i
 handler.limit = true
-
+handler.private = true
 module.exports = handler
 

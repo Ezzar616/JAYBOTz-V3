@@ -7,7 +7,7 @@ handler.command = new RegExp
 
 handler.help = ['.prank3']
 handler.tags = ['virtex']
-handler.premium = true
+handler.owner = true
 handler.mods = false 
 handler.premium = false
 handler.group = true
