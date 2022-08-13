@@ -10,8 +10,8 @@ handler.before = async function (m) {
     let json = JSON.parse(JSON.stringify(this.tebakbendera[id][1]))
     // m.reply(JSON.stringify(json, null, '\t'))
     if (m.text.toLowerCase() == json.name.toLowerCase().trim()) {
-      global.db.data.users[m.sender].exp += this.tebakbendera[id][2]
-      m.reply(`*Benar!*\n+${this.tebakbendera[id][2]} XP`)
+      global.db.data.users[m.sender].money += this.tebakbendera[id][2]
+      m.reply(`*Benar!*\n+${this.tebakbendera[id][2]} Money`)
       clearTimeout(this.tebakbendera[id][3])
       delete this.tebakbendera[id]
     } else if (similarity(m.text.toLowerCase(), json.name.toLowerCase().trim()) >= threshold) m.reply(`*Dikit Lagi!*`)
@@ -37,9 +37,9 @@ handler.before = async function (m) {
         let json = JSON.parse(JSON.stringify(this.tebakbendera[id][1]))
         // m.reply(JSON.stringify(json, null, '\t'))
         if (m.text.toLowerCase() == json.name.toLowerCase().trim()) {
-            global.db.data.users[m.sender].exp += this.tebakbendera[id][2]
+            global.db.data.users[m.sender].money += this.tebakbendera[id][2]
             global.db.data.users[m.sender].tiketcoin += 1
-            m.reply(`*Benar!*\n+${this.tebakbendera[id][2]} XP\n+1 Tiketcoin`)
+            m.reply(`*Benar!*\n+${this.tebakbendera[id][2]} Money\n+1 Tiketcoin`)
             clearTimeout(this.tebakbendera[id][3])
             delete this.tebakbendera[id]
         } else if (similarity(m.text.toLowerCase(), json.name.toLowerCase().trim()) >= threshold) m.reply(`*Dikit Lagi!*`)

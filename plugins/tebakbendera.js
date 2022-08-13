@@ -1,7 +1,7 @@
 /*let fetch = require('node-fetch')
 
 let timeout = 180000
-let poin = 500
+let poin = 50000
 let handler = async (m, { conn, usedPrefix }) => {
   conn.tebakbendera = conn.tebakbendera ? conn.tebakbendera : {}
   let id = m.chat
@@ -15,7 +15,7 @@ let handler = async (m, { conn, usedPrefix }) => {
   let caption = `
 Timeout *${(timeout / 1000).toFixed(2)} detik*
 Ketik ${usedPrefix}tekbe untuk hint
-Bonus: ${poin} XP
+Bonus: ${poin} Money
     `.trim()
   conn.tebakbendera[id] = [
     await conn.sendFile(m.chat, json.img, 'tebakbendera.jpg', caption, m, false, { thumbnail: Buffer.alloc(0) }),
