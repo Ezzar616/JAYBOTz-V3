@@ -7,6 +7,7 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/EkaBotWhatsapp/JAYBOTz-V3)
 
 ### BUILD HEROKU
+```bash
 heroku/nodejs
 https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
 https://github.com/clhuang/heroku-buildpack-webp-binaries.git
