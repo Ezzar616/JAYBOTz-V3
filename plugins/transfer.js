@@ -26,7 +26,43 @@ let handler = async (m, { conn, args, usedPrefix, owner }) => {
                         }
                     }
                 } else conn.reply(m.chat, `Uang kamu tidak mencukupi untuk mentransfer Money sebesar ${count}`.trim(), m)
-                break 
+                break
+             case 'pet':
+                if (global.db.data.users[m.sender].pet >= count * 1) {
+                    try {
+                        global.db.data.users[m.sender].pet -= count * 1
+                        global.db.data.users[who].pet += count * 1
+                        conn.reply(m.chat, `Berhasil mentransfer pet sebesar ${count}`.trim(), m)
+                    } catch (e) {
+                        global.db.data.users[m.sender].pet += count * 1
+                        m.reply('Gagal Menstransfer')
+                        console.log(e)
+                        if (owner) {
+                            for (let jid of global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid)) {
+                                conn.reply(jid, 'Transfer.js error\nNo: *' + m.sender.split`@`[0] + '*\nCommand: *' + m.text + '*\n\n*' + e + '*', m)
+                             }
+                        }
+                    }
+                } else conn.reply(m.chat, `Pet kamu tidak mencukupi untuk mentransfer Pet sebesar ${count}`.trim(), m)
+                break
+             case 'potion':
+                if (global.db.data.users[m.sender].potion >= count * 1) {
+                    try {
+                        global.db.data.users[m.sender].potion -= count * 1
+                        global.db.data.users[who].potion += count * 1
+                        conn.reply(m.chat, `Berhasil mentransfer Potion sebesar ${count}`.trim(), m)
+                    } catch (e) {
+                        global.db.data.users[m.sender].pet += count * 1
+                        m.reply('Gagal Menstransfer')
+                        console.log(e)
+                        if (owner) {
+                            for (let jid of global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid)) {
+                                conn.reply(jid, 'Transfer.js error\nNo: *' + m.sender.split`@`[0] + '*\nCommand: *' + m.text + '*\n\n*' + e + '*', m)
+                             }
+                        }
+                    }
+                } else conn.reply(m.chat, `Potion kamu tidak mencukupi untuk mentransfer Potion sebesar ${count}`.trim(), m)
+                break
              case 'exp':
                 if (global.db.data.users[m.sender].exp >= count * 1) {
                     try {
@@ -44,6 +80,130 @@ let handler = async (m, { conn, args, usedPrefix, owner }) => {
                         }
                     }
                 } else conn.reply(m.chat, `Exp kamu tidak mencukupi untuk mentransfer Exp sebesar ${count}`.trim(), m)
+                break
+             case 'armor':
+                if (global.db.data.users[m.sender].armor >= count * 1) {
+                    try {
+                        global.db.data.users[m.sender].armor -= count * 1
+                        global.db.data.users[who].armor += count * 1
+                        conn.reply(m.chat, `Berhasil mentransfer armor sebesar ${count}`.trim(), m)
+                    } catch (e) {
+                        global.db.data.users[m.sender].armor += count * 1
+                        m.reply('Gagal Menstransfer')
+                        console.log(e)
+                        if (owner) {
+                            for (let jid of global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid)) {
+                                conn.reply(jid, 'Transfer.js error\nNo: *' + m.sender.split`@`[0] + '*\nCommand: *' + m.text + '*\n\n*' + e + '*', m)
+                             }
+                        }
+                    }
+                } else conn.reply(m.chat, `Armor kamu tidak mencukupi untuk mentransfer Armor sebesar ${count}`.trim(), m)
+                break
+             case 'sword':
+                if (global.db.data.users[m.sender].sword >= count * 1) {
+                    try {
+                        global.db.data.users[m.sender].sword -= count * 1
+                        global.db.data.users[who].sword += count * 1
+                        conn.reply(m.chat, `Berhasil mentransfer sword sebesar ${count}`.trim(), m)
+                    } catch (e) {
+                        global.db.data.users[m.sender].sword += count * 1
+                        m.reply('Gagal Menstransfer')
+                        console.log(e)
+                        if (owner) {
+                            for (let jid of global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid)) {
+                                conn.reply(jid, 'Transfer.js error\nNo: *' + m.sender.split`@`[0] + '*\nCommand: *' + m.text + '*\n\n*' + e + '*', m)
+                             }
+                        }
+                    }
+                } else conn.reply(m.chat, `Sword kamu tidak mencukupi untuk mentransfer Sword sebesar ${count}`.trim(), m)
+                break
+             case 'fishingrod':
+                if (global.db.data.users[m.sender].fishingrod >= count * 1) {
+                    try {
+                        global.db.data.users[m.sender].fishingrod -= count * 1
+                        global.db.data.users[who].fishingrod += count * 1
+                        conn.reply(m.chat, `Berhasil mentransfer fishingrod sebesar ${count}`.trim(), m)
+                    } catch (e) {
+                        global.db.data.users[m.sender].pet += count * 1
+                        m.reply('Gagal Menstransfer')
+                        console.log(e)
+                        if (owner) {
+                            for (let jid of global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid)) {
+                                conn.reply(jid, 'Transfer.js error\nNo: *' + m.sender.split`@`[0] + '*\nCommand: *' + m.text + '*\n\n*' + e + '*', m)
+                             }
+                        }
+                    }
+                } else conn.reply(m.chat, `Fishingrod kamu tidak mencukupi untuk mentransfer Fishingrod sebesar ${count}`.trim(), m)
+                break
+             case 'diamond':
+
+                if (global.db.data.users[m.sender].diamond >= count * 1) {
+
+                    try {
+
+                        global.db.data.users[m.sender].diamond -= count * 1
+
+                        global.db.data.users[who].diamond += count * 1
+
+                        conn.reply(m.chat, `Berhasil mentransfer diamond sebesar ${count}`.trim(), m)
+
+                    } catch (e) {
+
+                        global.db.data.users[m.sender].diamond += count * 1
+
+                        m.reply('Gagal Menstransfer diamond')
+
+                        console.log(e)
+
+                        if (owner) {
+
+                            for (let jid of global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid)) {
+
+                                conn.reply(jid, 'Transfer.js error\nNo: *' + m.sender.split`@`[0] + '*\nCommand: *' + m.text + '*\n\n*' + e + '*', m)
+
+                            }
+
+                        }
+
+                    }
+
+                } else conn.reply(m.chat, `diamond kamu tidak mencukupi untuk mentransfer Diamond sebesar ${count}`.trim(), m)
+
+                break
+             case 'pickaxe':
+
+                if (global.db.data.users[m.sender].pickaxe >= count * 1) {
+
+                    try {
+
+                        global.db.data.users[m.sender].pickaxe -= count * 1
+
+                        global.db.data.users[who].pickaxe += count * 1
+
+                        conn.reply(m.chat, `Berhasil mentransfer pickaxe sebesar ${count}`.trim(), m)
+
+                    } catch (e) {
+
+                        global.db.data.users[m.sender].pickaxe += count * 1
+
+                        m.reply('Gagal Menstransfer diamond')
+
+                        console.log(e)
+
+                        if (owner) {
+
+                            for (let jid of global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid)) {
+
+                                conn.reply(jid, 'Transfer.js error\nNo: *' + m.sender.split`@`[0] + '*\nCommand: *' + m.text + '*\n\n*' + e + '*', m)
+
+                            }
+
+                        }
+
+                    }
+
+                } else conn.reply(m.chat, `Pickaxe kamu tidak mencukupi untuk mentransfer Pickaxe sebesar ${count}`.trim(), m)
+
                 break
              case 'limit':
                 if (global.db.data.users[m.sender].limit >= count * 1) {
@@ -65,7 +225,7 @@ let handler = async (m, { conn, args, usedPrefix, owner }) => {
                 } else conn.reply(m.chat, `Limit kamu tidak mencukupi untuk mentransfer Limit sebesar ${count}`.trim(), m)
                 break
             default:
-                return conn.reply(m.chat, `Gunakan format ${usedPrefix}transfer <type> <jumlah> <@tag>\ncontoh penggunaan: *${usedPrefix}transfer money 100 @tag*\n\n*List yang bisa di transfer*\nMoney\nExp\nLimit`.trim(), m)
+                return conn.reply(m.chat, `Gunakan format ${usedPrefix}transfer <type> <jumlah> <@tag>\ncontoh penggunaan: *${usedPrefix}transfer money 100 @tag*\n\n*List yang bisa di transfer*\nmoney\npet\npotion\nexp\narmor\nsword\nlimit`.trim(), m)
         }
     } catch (e) {
         conn.reply(m.chat, `Format yang anda gunakan salah\n\nGunakan format ${usedPrefix}transfer <type> <jumlah> <@tag>\ncontoh penggunaan: *${usedPrefix}transfer money 100 @tag*`.trim(), m)

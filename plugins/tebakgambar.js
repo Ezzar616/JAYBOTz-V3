@@ -16,7 +16,7 @@ let handler = async (m, { conn, usedPrefix }) => {
   ${json.deskripsi}
 Timeout *${(timeout / 1000).toFixed(2)} detik*
 Ketik ${usedPrefix}hint untuk hint
-Bonus: ${poin} XP
+Bonus: ${poin} Money
 Tiketcoin: 1 Tiketcoin
     `.trim()
   conn.tebakgambar[id] = [

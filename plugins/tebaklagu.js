@@ -1,7 +1,7 @@
 let fetch = require('node-fetch')
 
 let timeout = 180000
-let poin = 1000
+let poin = 10000
 let handler = async (m, { conn, usedPrefix }) => {
     conn.tebaklagu = conn.tebaklagu ? conn.tebaklagu : {}
     let id = m.chat
@@ -20,7 +20,7 @@ Artis : ${json.artis}
 Judul : _____
 Timeout *${(timeout / 1000).toFixed(2)} detik*
 Ketik *${usedPrefix}cek* untuk bantuan
-Bonus: ${poin} XP
+Bonus: ${poin} Money
 Tiketcoin: 1 Tiketcoin
 *Balas pesan ini untuk menjawab!*`.trim()
     conn.tebaklagu[id] = [

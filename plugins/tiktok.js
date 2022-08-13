@@ -14,6 +14,7 @@ handler.tags = ['downloader']
 
 handler.command = /^(tik(tok)?(dl)?)$/i
 
+handler.private = true
 module.exports = handler*/
 
 
@@ -23,14 +24,14 @@ if (!args[0]) throw `*Perintah ini untuk mengunduh video tiktok dengan link*\n\n
 if (!args[0].match(/tiktok/gi)) throw `*Link salah! Perintah ini untuk mengunduh video tiktok dengan link*\n\ncontoh:\n${usedPrefix + command} https://vm.tiktok.com/ZGJAmhSrp/`
 let p = await  hxz.ttdownloader(args[0])
 const { nowm, wm, audio } = p
-// made by arietube
+// made by JAYBOTz
  conn.sendFile(m.chat, nowm, 'tiktok.mp4', `*${global.wm}*`, m)
 }
 handler.help = ['tiktok'].map(v => v + ' <url>')
 handler.tags = ['downloader']
 handler.command = /^(tiktok|tiktokdl)$/i
 handler.limit = true
-handler.group = true
+handler.private = true
 module.exports = handler
 
 /*
@@ -42,7 +43,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     const url = video.no_watermark || video.no_watermark_hd || video.with_watermark || video.no_watermark_raw
     if (!url) throw 'Can\'t download video!'
     m.reply('Sedang diproses...')
-    conn.sendFile(m.chat, url, 'tiktok.mp4', `*© Arietube*
+    conn.sendFile(m.chat, url, 'tiktok.mp4', `*© JAYBOTz*
 `.trim(), m)
 }
 handler.help = ['tiktok <url>']
@@ -50,6 +51,7 @@ handler.tags = ['downloader']
 
 handler.command = /^(tik|tt|tiktok)$/i
 
+handler.private = true
 module.exports = handler
 */
 

@@ -10,9 +10,9 @@ handler.before = async function (m) {
         let json = JSON.parse(JSON.stringify(this.tebakkata[id][1]))
         // m.reply(JSON.stringify(json, null, '\t'))
         if (m.text.toLowerCase() == json.jawaban.toLowerCase().trim()) {
-            global.db.data.users[m.sender].exp += this.tebakkata[id][2]
+            global.db.data.users[m.sender].money += this.tebakkata[id][2]
             global.db.data.users[m.sender].tiketcoin += 1
-            m.reply(`*Benar!*\n+${this.tebakkata[id][2]} XP\n+1 Tiketcoin`)
+            m.reply(`*Benar!*\n+${this.tebakkata[id][2]} Money\n+1 Tiketcoin`)
             clearTimeout(this.tebakkata[id][3])
             delete this.tebakkata[id]
         } else if (similarity(m.text.toLowerCase(), json.jawaban.toLowerCase().trim()) >= threshold) m.reply(`*Dikit Lagi!*`)
