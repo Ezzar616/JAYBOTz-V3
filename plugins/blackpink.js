@@ -6,7 +6,7 @@ fetch('https://raw.githubusercontent.com/arivpn/dbase/master/kpop/blekping.txt')
 let handler = async (m, { conn }) => {
     let img = bpink[Math.floor(Math.random() * bpink.length)]
     if (!img) throw img
-    await conn.sendFile(m.chat, img, '', '© nih Blackpinknya By JAYBOTz', m, 0, { thumbnail: await (await fetch(img)).buffer() })
+    await conn.sendFile(m.chat, img, '', '© nih Blackpinknya jangan lupa https://ponselharian.com/93iHKL3Y 👍', m, 0, { thumbnail: await (await fetch(img)).buffer() })
 }
 handler.help = ['blackpink']
 handler.tags = ['internet']

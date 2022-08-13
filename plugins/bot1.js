@@ -1,13 +1,13 @@
 let fs = require('fs')
 const { MessageType } = require('@adiwajshing/baileys')
 let handler = async (m, { conn }) => {
-let helloarie = fs.readFileSync('./mp3/JAYBOTz.opus') 
+let helloarie = fs.readFileSync('./mp3/walaikum salam, ada yang bisa saya bantu_, mohon ketik #menu, untuk melihat semua fitur JAYBOTz.opus') 
 conn.sendFile(m.chat, helloarie, '', '', m, true)
 //conn.sendMessage(m.chat, helloarie, MessageType.audio, {quoted: m, mimetype: 'audio/mp4', ptt:true})
 // await conn.sendMessage(m.chat, { audio: { url: helloarie }, mimetype: 'audio/mp4'}, m)
 }
 
-handler.customPrefix = /^(bot|robot)$/i
+handler.customPrefix = /^(Assalamualaikum|Assalamu'alaikum wr wb|asssalam|salam)$/i
 handler.command = new RegExp
 
 handler.limit = true
