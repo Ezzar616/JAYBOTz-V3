@@ -1,5 +1,5 @@
 let handler = async m => m.reply(`
-            𝒃𝒐𝒕 𝒊𝒏𝒊 𝒎𝒆𝒏𝒈𝒈𝒖𝒏𝒂𝒌𝒂𝒏 𝑺𝑪 𝒅𝒊𝒔𝒊𝒏𝒊 https://youtu.be/J0KmlEwLIVc 𝒋𝒈𝒏 𝒍𝒖𝒑𝒂 𝒔𝒖𝒃𝒔𝒄𝒓𝒊𝒃𝒆
+            𝒃𝒐𝒕 𝒊𝒏𝒊 𝒎𝒆𝒏𝒈𝒈𝒖𝒏𝒂𝒌𝒂𝒏 𝑺𝑪 𝒅𝒊𝒔𝒊𝒏𝒊 https://linkr.bio/JAYBOTz
 `.trim()) //
 
 handler.customPrefix = /^(.sc|.script|sc|script)$/i

@@ -11,7 +11,7 @@ handler.help = ['ig'].map(v => v + ' <url>')
 handler.tags = ['downloader']
 handler.command = /^(ig|igdl|instagram)$/i
 handler.limit = true
-handler.group = true
+handler.private = true
 
 module.exports = handler
 
@@ -31,7 +31,7 @@ instagramdl(args[0]).then(async res => {
     let json = JSON.parse(instagramdl)
     for (let { url, type } of json) {
       await delay(1500)
-      conn.sendFile(m.chat, url, 'ig' + (type == 'image' ? '.jpg' : '.mp4'), 'ArieTube', m, { thumbnail: Buffer.alloc(0) })
+      conn.sendFile(m.chat, url, 'ig' + (type == 'image' ? '.jpg' : '.mp4'), 'JAYBOTz', m, { thumbnail: Buffer.alloc(0) })
     }
   })
 }
@@ -40,7 +40,7 @@ handler.tags = ['downloader']
 handler.command = /^(ig|igdl|instagram)$/i
 handler.limit = true
 handler.premium = false
-
+handler.private = true
 module.exports = handler
 
 const delay = time => new Promise(res => setTimeout(res, time))*/
@@ -55,14 +55,14 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
   let json = await res.json()
    if (!json.status) throw json
   m.reply('Sedang diproses...')
-   conn.sendFile(m.chat, json.linkdownload, 'ig.mp4', '*© ArieTube*', m, { thumbnail: Buffer.alloc(0) })
+   conn.sendFile(m.chat, json.linkdownload, 'ig.mp4', '*© JAYBOTz*', m, { thumbnail: Buffer.alloc(0) })
 }
 
 handler.help = ['ig'].map(v => v + ' <url>')
 handler.tags = ['downloader']
 handler.command = /^(ig|igdl|instagram)$/i
 handler.limit = true
-handler.group = true
+handler.private = true
 
 module.exports = handler
 

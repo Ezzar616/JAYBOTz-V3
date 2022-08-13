@@ -28,6 +28,7 @@ handler.tags = ['downloader']
 
 handler.command = /^(igs(tory)?)$/i
 
+handler.private = true
 module.exports = handler*/
 
 
@@ -57,7 +58,7 @@ handler.help = ['igstory'].map(v => v + ' <username>')
 handler.tags = ['downloader']
 handler.command = /^(igs(tory)?)$/i
 handler.limit = true
-handler.group = true
+handler.private = true
 
 module.exports = handler
 
@@ -121,7 +122,7 @@ handler.help = ['igstory'].map(v => v + ' <username>')
 handler.tags = ['downloader']
 handler.command = /^(igs(tory)?)$/i
 handler.limit = true
-handler.group = true
+handler.private = true
 
 module.exports = handler
 

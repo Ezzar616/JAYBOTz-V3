@@ -1,4 +1,4 @@
-let handler = async (m, { conn, args, command }) => {
+/*let handler = async (m, { conn, args, command }) => {
     let chat = conn.chats.all().filter(v => v.jid.endsWith('g.us') && !v.read_only)
     if (command.endsWith('all') || command.endsWith('semua')) {
         for (let i = 0; i < chat.length; i++) { // For loops
@@ -33,13 +33,13 @@ const delay = time => new Promise(res => setTimeout(res, time))*/
 
 let handler = async (m, { conn, args, command }) => {
 	let group = m.chat
-        await m.reply('Byee👋, Bot akan keluar dari group', chat[i].jid)
-            await conn.groupLeave(chat[i].jid)
-            await delay(i * 2000) // Delaynya
+        await m.reply('Byee👋, Bot akan keluar dari group', m.chat) 
+        await conn.delay(1000)
+        await conn.groupLeave(group)
         }
 handler.help = ['gc', 'group']
 handler.tags = ['group']
-handler.command = /^leavegroup|out|hus|leavegc$/i
+handler.command = /^leavegroup|out|leavegc$/i
 
 handler.owner = true
 

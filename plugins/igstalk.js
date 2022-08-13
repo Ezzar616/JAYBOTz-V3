@@ -38,6 +38,7 @@ handler.tags = ['downloader']
 
 handler.command = /^(igstalk)$/i
 
+handler.private = true
 module.exports = handler
 */
 
@@ -65,7 +66,7 @@ handler.help = ['igstalk @username']
 handler.tags = ['downloader']
 handler.command = /^(igstalk)$/i
 handler.limit = true
-
+handler.private = true
 module.exports = handler*/
 
 
@@ -94,7 +95,7 @@ handler.help = ['igstalk <username>']
 handler.tags = ['internet']
 handler.command = /^(igstalk)$/i
 handler.limit = true
-
+handler.private = true
 module.exports = handler
 
 async function igstalk(username) {

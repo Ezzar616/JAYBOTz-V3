@@ -8,7 +8,7 @@ let handler = async (m, { conn, text, isOwner, groupMetadata }) => {
    // let id = m.chat
    // let groupMetadata = await conn.groupMetadata(m.chat)
     let res = await conn.groupAcceptInvite(code)
-    expired = Math.floor(Math.min(999, Math.max(7, isOwner ? isNumber(expired) ? parseInt(expired) : 0 : 3)))
+    expired = Math.floor(Math.min(999, Math.max(1, isOwner ? isNumber(expired) ? parseInt(expired) : 0 : 1)))
     m.reply(`Berhasil join grup ${res} selama ${expired ? ` selama ${expired} hari` : ''}`)
    // conn.reply(`Bot telah di undang di group: ${groupMetadata.subject}\nCode ID: ${res}`, `6285162778904@s.whatsapp.net`)
     setTimeout(() => {
@@ -22,8 +22,7 @@ let handler = async (m, { conn, text, isOwner, groupMetadata }) => {
 //handler.tags = ['premium']
 
 handler.command = /^join$/i
-handler.premium = true
-handler.owner = true
+handler.private = true
 
 module.exports = handler
 
