@@ -20,8 +20,8 @@ https://github.com/clhuang/heroku-buildpack-webp-binaries.git
 * Download And Install ImageMagick [`Click Here`](https://imagemagick.org/script/download.php)
 
 ```bash
-git clone https://github.com/BochilGaming/games-wabot -b multi-device
-cd games-wabot
+git clone https://github.com/EkaBotWhatsapp/JAYBOTz-V3 -b multi-device
+cd JAYBOTz-V3
 npm install
 npm update
 ```
