@@ -52,14 +52,6 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       }
       chat.badword = isEnable
       break
-    case 'jadibot':
-      isAll = true
-      if (!isOwner) {
-        global.dfail('owner', m, conn)
-        throw false
-      }
-      chat.jadibot = isEnable
-      break
     case 'antidelete':
       if (m.isGroup) {
         if (!(isAdmin || isOwner)) {
@@ -108,7 +100,16 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
           throw false
         }
       }
-      chat.antiLink = isEnable
+      chat.antilink = isEnable
+      break 
+    case 'antilinkwame':
+      if (m.isGroup) {
+        if (!(isAdmin || isOwner)) {
+          global.dfail('admin', m, conn)
+          throw false
+        }
+      }
+      chat.antilinkwame = isEnable
       break 
     case 'antisticker':
       if (m.isGroup) {

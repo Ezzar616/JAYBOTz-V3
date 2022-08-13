@@ -1,12 +1,12 @@
 let fetch = require('node-fetch')
-let exo = []
+let arr = []
 fetch('https://raw.githubusercontent.com/arivpn/dbase/master/kpop/exo.txt')
     .then(res => res.text())
-    .then(txt => exo = txt.split('\n'))
+    .then(txt => arr = txt.split('\n'))
 let handler = async (m, { conn }) => {
-    let img = exo[Math.floor(Math.random() * arr.length)]
+    let img = arr[Math.floor(Math.random() * arr.length)]
     if (!img) throw img
-    await conn.sendFile(m.chat, img, '', '© nih EXOnya By JAYBOTz', m, 0, { thumbnail: await (await fetch(img)).buffer() })
+    await conn.sendFile(m.chat, img, '', '© nih EXOnya jangan lupa https://ponselharian.com/93iHKL3Y 👍', m, 0, { thumbnail: await (await fetch(img)).buffer() })
 }
 handler.help = ['exo']
 handler.tags = ['internet']

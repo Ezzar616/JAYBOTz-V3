@@ -3,7 +3,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
   if (!args[0]) throw `Masukkan URL Facebook yang ingin di download!\n\nContoh:${usedPrefix + command} https://www.facebook.com/alanwalkermusic/videos/277641643524720`
   if (/^https?:\/\/.*(fb.watch|facebook.com)/i.test(m.text)) throw `url salah`
 
-  let res = await fetch(API('neoxr', '/api/download/fb', { url: args[0] }, 'apikey'))
+  let res = await fetch(API('neoxr', '/api/fb', { url: args[0] }, 'apikey'))
   if (!res.ok) throw eror
   let json = await res.json()
   if (!json.status) throw json
@@ -15,6 +15,7 @@ handler.tags = ['downloader']
 
 handler.command = /^f((b|acebook)(dl|download)?(er)?)$/i
 
+handler.private = true
 handler.limit = true
 
 module.exports = handler*/
@@ -61,6 +62,7 @@ handler.tags = ['downloader']
 
 handler.command = /^f((b|acebook)(dl|download)?(er)?)$/i
 
+handler.private = true
 module.exports = handler
 
 function clockString(ms) {
