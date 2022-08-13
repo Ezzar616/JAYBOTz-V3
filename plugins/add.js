@@ -7,7 +7,7 @@ const fetch = require('node-fetch')
 
 let handler = async (m, { conn, text, participants, usedPrefix, command }) => {
 	if (!text) throw `_Masukan nomor!_\nContoh:\n\n${usedPrefix + command} ${global.owner[0]}`
-	m.reply('_Sedang di proses..._')
+	m.reply('_Sukses..._')
     let _participants = participants.map(user => user.id)
     let users = (await Promise.all(
         text.split(',')
@@ -56,13 +56,13 @@ handler.help = ['add', '+'].map(v => v + ' @user')
 handler.tags = ['group']
 handler.command = /^(add|\+)$/i
 
-handler.owner = false
+handler.owner = true
 handler.mods = false
 handler.premium = false
 handler.group = true
 handler.private = false
 
-handler.admin = true
+handler.admin = false
 handler.botAdmin = true
 
 handler.fail = null

@@ -29,22 +29,60 @@ let handler = async (m, { conn, usedPrefix, owner }) => {
             let mythic = (_mythic * 1)
             let _legendary = `${pickRandom(['1','3','1','1','2'])}`
             let legendary = (_legendary * 1)
-            let itemrand = [`*Selamat anda mendapatkan item rare yaitu*\n${mythic} Mythic Crate`,`*Selamat kamu mendapatkan item rare yaitu*\n${legendary} Legendary Crate`]
+            let itemrand = [`*Selamat kamu mendapatkan item rare yaitu*\n${mythic} Mythic Crate`,`*Selamat kamu mendapatkan item rare yaitu*\n${legendary} Legendary Crate`]
+
+            setTimeout(() => {
+                   conn.reply(m.chat, itemrand, m)
+                  }, 15000)
+
             let rendem = itemrand[Math.floor(Math.random() * itemrand.length)]
-            let str = `
-Nyawa mu berkurang -${health * 1} karena Kamu telah berpetualang sampai ${pickRandom(['Jepang', 'Korea', 'Bali', 'Amerika', 'Iraq', 'Arab', 'Pakistan', 'German', 'Finlandia', 'Ke bawa dunia mimpi', 'Ujung dunia', 'Mars', 'Zimbabwe', 'Bulan', 'Pluto', 'Matahari', 'Hatinya dia', '...'])} dan mendapatkan
+            let str1 = `
+kamu sedang adventure ke wilayah *${pickRandom(['Jepang', 'Korea', 'Bali', 'Amerika', 'Iraq', 'Arab', 'Pakistan', 'German', 'Finlandia', 'Ke bawa dunia mimpi', 'Ujung dunia', 'Mars', 'Zimbabwe', 'Bulan', 'Pluto', 'Matahari', 'Hatinya dia', '...'])}*
+`.trim()
+
+            setTimeout(() => {
+                   conn.reply(m.chat, str1, m)
+                  }, 1000)
+
+            let str2 = `
+awas ada gangster mafia di wilayah ini
+`.trim()
+
+            setTimeout(() => {
+                   conn.reply(m.chat, str2, m)
+                  }, 3000)
+
+            let str3 = `
+kamu sedang baku tembak oleh gengster mafia di wilayah ini
+`.trim()
+
+            setTimeout(() => {
+                   conn.reply(m.chat, str3, m)
+                  }, 5000)
+
+            let str4 = `
+sedang merampas barang bawaan gengster di wilayah ini...
+`.trim()
+
+            setTimeout(() => {
+                   conn.reply(m.chat, str4, m)
+                  }, 7000)
+
+            let str5 = `
+Nyawa mu berkurang -${health * 1} karena Kamu telah baku tembak dengan gengster di wilaya ini dan kamu mendapatkan
 *exp:* ${exp} 
 *uang:* ${uang}
 *tiketcoin:* 1
 *sampah:* ${sampah}${potion == 0 ? '' : '\n*Potion:* ' + potion + ''}${diamond == 0 ? '' : '\n*diamond:* ' + diamond + ''}${common == 0 ? '' : '\n*common crate:* ' + common + ''}${uncommon == 0 ? '' : '\n*uncommon crate:* ' + uncommon + ''}
 `.trim()
+
             
             setTimeout(() => {
-                  conn.sendMessage(m.chat, { text: str }, { quoted: m })
-                  }, 0)
+                  conn.sendMessage(m.chat, { text: str5 }, { quoted: m })
+                  }, 15000)
             setTimeout(() => {
                    conn.reply(m.chat, rendem, m)
-                  }, 1000)
+                  }, 15000)
 					
             global.db.data.users[m.sender].health -= health * 1
             global.db.data.users[m.sender].exp += exp * 1
@@ -58,7 +96,7 @@ Nyawa mu berkurang -${health * 1} karena Kamu telah berpetualang sampai ${pickRa
             global.db.data.users[m.sender].mythic += mythic * 1
             global.db.data.users[m.sender].legendary += legendary * 1
             global.db.data.users[m.sender].lastadventure = new Date * 1
-            } else conn.reply(m.chat, `Anda sudah berpetualang dan kelelahan, silahkan coba *${timers}* lagi`, m)
+            } else conn.reply(m.chat, `Anda sudah berpetualang dan kelelahan melawan gengster di wilayah ini, silahkan coba *${timers}* lagi`, m)
         } else conn.reply(m.chat, 'Minimal 80 health untuk bisa berpetualang, beli nyawa dulu dengan ketik *' + usedPrefix + 'shop buy potion <jumlah>*\ndan ketik *' + usedPrefix + 'use potion <jumlah>*', m)
     } catch (e) {
         console.log(e)
@@ -68,7 +106,7 @@ Nyawa mu berkurang -${health * 1} karena Kamu telah berpetualang sampai ${pickRa
 
 handler.help = ['adventure']
 handler.tags = ['rpg']
-handler.command = /^(adventure|berpetualang)$/i
+handler.command = /^(adventure|petualang)$/i
 handler.limit = true
 handler.group = true
 handler.fail = null
