@@ -25,13 +25,13 @@ let handler = async (m, { conn, command, usedPrefix, text, isPrems, isOwner }) =
   let { dl_link, thumb, title, filesize, filesizeF } = yt
   let isLimit = (isPrems || isOwner ? 99 : limit) * 1024 < filesize
   conn.sendFile(m.chat, thumb, 'thumbnail.jpg', `
-*${title}*
-*⇄ㅤ     ◁   ㅤ  ❚❚ㅤ     ▷ㅤ     ↻*
-
-*📂ukuran video:* ${filesizeF}
-*👉🏻*Source:* ${vid.url}
+*Title:* ${title}
+*Filesize:* ${filesizeF}
+*Source:* ${vid.url}
 *${isLimit ? 'Pakai ': ''}Link:* ${await shortlink(dl_link)}
 *Server y2mate:* ${usedServer}
+
+_*Please wait while processing..*_
 `.trim(), m)
 let _thumb = {}
 try { if (isVideo) _thumb = { thumbnail: await (await fetch(thumb)).buffer() } }
@@ -50,7 +50,7 @@ handler.help = ['play', 'play2'].map(v => v + ' <search>')
 handler.tags = ['downloader']
 handler.command = /^play2?$/i
 handler.premium = false
-handler.group = true
+handler.private = true
 
 handler.exp = 0
 handler.limit = true

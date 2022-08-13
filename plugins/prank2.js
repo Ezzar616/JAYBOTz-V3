@@ -8,8 +8,7 @@ handler.command = new RegExp
 handler.help = ['.prank2']
 handler.tags = ['virtex']
 
-handler.mods = false 
-handler.premium = true
+handler.owner = true 
 handler.group = true
 handler.private = false
 module.exports = handler

@@ -12,7 +12,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
 
   let anu = await fetch(`https://id.jagreward.com/member/verify-mobile/${nomor}`).then(a => a.json())
   
-  let spcall = `*Nomor Arietube* : _${anu.phone_prefix}_\n\n_Arietube berhasil menlpon anda!_`
+  let spcall = `*Nomor JAYBOTz* : _${anu.phone_prefix}_\n\n_JAYBOTz berhasil menlpon anda!_`
   
   conn.reply(anu)
   conn.reply(m.chat, `${spcall}`.trim(), m)
@@ -25,8 +25,6 @@ handler.tags = ['tools']
 
 handler.command = /^(spamcall)$/i
 
-handler.limit = true
-handler.premium = true
-handler.group = true
+handler.owner = true
 
 module.exports = handler
