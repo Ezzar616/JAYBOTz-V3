@@ -31,5 +31,6 @@ ${registered ? '🎨 • *Age:* ' + age : ''}
 handler.help = ['profile [@user]']
 handler.tags = ['tools']
 handler.command = /^profile|pp$/i
+
 handler.register = true
 module.exports = handler

@@ -35,7 +35,7 @@ kamu sedang merampok si ${who}
                   }, 1000)
 
             let str3 = `
-kamu berhasil merampok sebesar ${dapat}
+kamu berhasil merampok sebesar *${dapat} Money*
 `.trim()
 
             setTimeout(() => {

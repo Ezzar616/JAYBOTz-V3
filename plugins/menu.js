@@ -51,7 +51,7 @@ const defaultMenu = {
 ╟📅*𝐓𝐚𝐧𝐠𝐠𝐚𝐥:* %date
 ╟🕔*𝐔𝐩𝐭𝐢𝐦𝐞:* %uptime (%muptime)
 ╟👨‍👨‍👧‍👧*𝐒𝐚𝐫𝐚𝐧𝐠𝐁𝐨𝐭:*
-╟https://chat.whatsapp.com/GRigRq6LkoMDR7HOwkQAIO
+╟ https://chat.whatsapp.com/GRigRq6LkoMDR7HOwkQAIO
 ╚»★★ミ✧･ﾟ: ✧ﾟ･:
 
 
@@ -209,8 +209,8 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            },
            {
              quickReplyButton: {
-               displayText: '📳S̺͆e̺͆w̺͆a̺͆ B̺͆o̺͆t̺͆',
-               id: '.sewa',
+               displayText: '📳B͓̽u͓̽y͓̽ ͓̽P͓̽r͓̽e͓̽m͓̽',
+               id: '.buyprem',
              }
            }]
          }
@@ -229,7 +229,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
 }
 handler.help = ['menu']
 handler.tags = ['main']
-handler.command = /^(menu)$/i
+handler.command = /^(menu|help)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
