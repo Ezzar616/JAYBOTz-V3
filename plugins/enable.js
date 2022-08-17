@@ -187,13 +187,13 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       }
       global.opts['nyimak'] = isEnable
       break
-    case 'autoread':
+    case 'autoreadgc':
       isAll = true
       if (!isROwner) {
         global.dfail('rowner', m, conn)
         throw false
       }
-      global.opts['autoread'] = isEnable
+      global.opts['autoreadgc'] = isEnable
       break
     case 'pconly':
     case 'privateonly':
@@ -250,7 +250,7 @@ List option:
 ❗whitelistmycontacts
 ❗restrict
 ❗nyimak
-❗autoread
+❗autoreadgc
 ❗pconly
 ❗gconly
 ❗swonly
