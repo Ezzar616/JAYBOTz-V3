@@ -7,10 +7,7 @@ Hai 👋
 
 ┏━━━•❅•°•❈〔 𝐋𝐢𝐬𝐭 𝐒𝐞𝐰𝐚 〕
 ┣★ミ Premium : 5k/Bulan
-┣★ミ Premium : 15k/2bulan
-┣★ミ Sewabot + running : 15k/bulan
-┣★ミ Sewabot + Running : 20k/2bulan
-┣★ミ Undang bot ke grup : 5k/bulan
+┣★ミ Premium : 10k/2bulan
 ┣➲ Scan Barcod Qrisnya diatas🤗
 ┗━━━•❅•°•❈
 
@@ -37,7 +34,7 @@ let message = await prepareWAMessageMedia({ image: {url: 'https://f.top4top.io/p
            },
                {
              callButton: {
-               displayText: 'Dana',
+               displayText: 'Kontak Owner',
                phoneNumber: '+62 851-6277-8904'
              }
            },           
@@ -45,7 +42,7 @@ let message = await prepareWAMessageMedia({ image: {url: 'https://f.top4top.io/p
              quickReplyButton: {
                displayText: '🧒 Owner',
                id: '.owner',
-             }
+             },
 
            }]
          }
@@ -58,8 +55,8 @@ let message = await prepareWAMessageMedia({ image: {url: 'https://f.top4top.io/p
      )
 }
 
-handler.help = ['sewa']
+handler.help = ['buyprem']
 handler.tags = ['donasi']
-handler.command = /^sewa$/i
+handler.command = /^buyprem$/i
 
 module.exports = handler
