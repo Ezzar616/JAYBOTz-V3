@@ -15,6 +15,7 @@ let handler = async (m, { conn, usedPrefix }) => {
   let caption = `
 Timeout *${(timeout / 1000).toFixed(2)} detik*
 Ketik ${usedPrefix}tekpe untuk bantuan
+Ketik ${usedPrefix}nyerahbola untuk menyerah
 Bonus: ${poin} Money
     `.trim()
   conn.tebakpemainbola[id] = [
@@ -54,6 +55,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let caption = `
 Timeout *${(timeout / 1000).toFixed(2)} detik*
 Ketik ${usedPrefix}tekpe untuk bantuan
+Ketik ${usedPrefix}nyerahbola untuk menyerah
 Bonus: ${poin} Money
 Tiketcoin: ${tiketcoin} TiketCoin
 `.trim()

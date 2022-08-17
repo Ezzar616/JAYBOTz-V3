@@ -4,10 +4,10 @@ let handler = async (m, { conn }) => {
     if (!(id in conn.tebakanime)) throw false
     let json = conn.tebakanime[id][1]
     let ans = json.jawaban.trim()
-    let clue = ans.replace(/[AIUEOaiueo]/g, '_')
-    conn.reply(m.chat, '```' + clue + '```\nBalas soalnya, bukan pesan ini', conn.tebakanime[id][0])
+    conn.reply(m.chat, `yahh nyerah\nJawabannya adalah *${json.jawaban}*`, conn.tebakanime[id][0])
+    delete conn.tebakanime[id]
 }
-handler.command = /^teme$/i
+handler.command = /^nyerahanime$/i
 handler.limit = true
 
 module.exports = handler
