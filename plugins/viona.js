@@ -5,6 +5,6 @@ handler.help = ['viona']
 handler.tags = ['asupan']
 
 handler.command = /^(viona)$/i
-handler.register = true
+
 handler.limit = 1
 module.exports = handler
