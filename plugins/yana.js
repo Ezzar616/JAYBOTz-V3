@@ -5,6 +5,5 @@ handler.help = ['yana']
 handler.tags = ['asupan']
 
 handler.command = /^(yana)$/i
-handler.register = true
 handler.limit = 1
 module.exports = handler

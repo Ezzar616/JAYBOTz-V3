@@ -5,6 +5,6 @@ handler.help = ['ziva']
 handler.tags = ['asupan']
 
 handler.command = /^(ziva)$/i
-handler.register = true
+
 handler.limit = 1
 module.exports = handler
