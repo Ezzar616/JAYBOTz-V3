@@ -12,7 +12,7 @@ let handler = async (m, { conn,usedPrefix, command, text, args }) => {
                                   if (pancingan == 0 || umpan == 0) return m.reply('*Kamu belum memiliki Pancingan dan Umpan, Silahkan beli dulu..*')
                                   if (new Date - global.db.data.users[m.sender].lastmancingeasy > 28800000) {
                                   if (global.db.data.users[m.sender].pancingan > 1) {
-                                  if (global.db.data.users[m.sender].umpan > 99) {
+                                  if (global.db.data.users[m.sender].umpan > 1) {
                                   let randomaku1 = `${Math.floor(Math.random() * 10)}`
                                   let randomaku2 = `${Math.floor(Math.random() * 10)}`
                                   let randomaku3 = `${Math.floor(Math.random() * 10)}`
@@ -62,8 +62,6 @@ let handler = async (m, { conn,usedPrefix, command, text, args }) => {
  *🦑 = [ ${zero4} ]*			 *🐳 = [ ${zero12} ]*
  *🐙 = [ ${zero3} ]*			 *🦈 = [ ${zero9} ]*
   *🐡 = [ ${zero5} ]*			*🐋 = [ ${zero1} ]*
-  
-+1 Tiketcoin
 `.trim()
                                  global.db.data.users[m.sender].paus += rbrb1
                                  global.db.data.users[m.sender].kepiting += rbrb2
@@ -93,7 +91,7 @@ let handler = async (m, { conn,usedPrefix, command, text, args }) => {
                                  m.reply('_Sedang Memancing..._')
                                  }, 0) 
                                  user.lastmancingeasy = new Date * 1
-                                 } else conn.reply(m.chat, 'Minimal umpan kamu *100* untuk memancing level mudah', m)
+                                 } else conn.reply(m.chat, 'Minimal umpan kamu *1* untuk memancing level mudah', m)
                             } else conn.reply(m.chat, 'Minimal pancingan kamu *Level 2* untuk memancing level mudah', m)
                        } else conn.reply(m.chat, `*Sepertinya Anda Sudah Lelah*\n*Silahkan Istirahat Sejenak Sekitar ${timers}*\n*Untuk Bisa Melanjutkan Memancing Lagi*`, m)
                  break
@@ -104,7 +102,7 @@ let handler = async (m, { conn,usedPrefix, command, text, args }) => {
                                   if (pancingan == 0 || umpan == 0) return m.reply('*Kamu belum memiliki Pancingan dan Umpan, Silahkan beli dulu..*')
                                   if (new Date - global.db.data.users[m.sender].lastmancingeasy > 28800000) {
                                   if (global.db.data.users[m.sender].pancingan > 2) {
-                                  if (global.db.data.users[m.sender].umpan > 149) {
+                                  if (global.db.data.users[m.sender].umpan > 20) {
                                   let randomakud1 = `${Math.floor(Math.random() * 50)}`
                                   let randomakud2 = `${Math.floor(Math.random() * 50)}`
                                   let randomakud3 = `${Math.floor(Math.random() * 50)}`
@@ -154,8 +152,6 @@ let handler = async (m, { conn,usedPrefix, command, text, args }) => {
  *🦑 = [ ${aine4} ]*			 *🐳 = [ ${aine12} ]*
  *🐙 = [ ${aine3} ]*			 *🦈 = [ ${aine9} ]*
   *🐡 = [ ${aine5} ]*			*🐋 = [ ${aine1} ]*
-  
-+1 Tiketcoin
 `.trim()
                                  global.db.data.users[m.sender].paus += rbrbs1
                                  global.db.data.users[m.sender].kepiting += rbrbs2
@@ -185,7 +181,7 @@ let handler = async (m, { conn,usedPrefix, command, text, args }) => {
                                  m.reply('_Sedang Memancing..._')
                                  }, 0) 
                                  user.lastmancingeasy = new Date * 1
-                                 } else conn.reply(m.chat, 'Minimal umpan kamu *150* untuk memancing level normal', m)
+                                 } else conn.reply(m.chat, 'Minimal umpan kamu *20* untuk memancing level normal', m)
                             } else conn.reply(m.chat, 'Minimal pancingan kamu *Level 3* untuk memancing level normal', m)
                        } else conn.reply(m.chat, `*Sepertinya Anda Sudah Lelah*\n*Silahkan Istirahat Sejenak Sekitar ${timerl}*\n*Untuk Bisa Melanjutkan Memancing Lagi*`, m)
                  break 
@@ -196,7 +192,7 @@ let handler = async (m, { conn,usedPrefix, command, text, args }) => {
                                   if (pancingan == 0 || umpan == 0) return m.reply('*Kamu belum memiliki Pancingan dan Umpan, Silahkan beli dulu..*')
                                   if (new Date - global.db.data.users[m.sender].lastmancingeasy > 28800000) {
                                   if (global.db.data.users[m.sender].pancingan > 3) {
-                                  if (global.db.data.users[m.sender].umpan > 199) {
+                                  if (global.db.data.users[m.sender].umpan > 30) {
                                   let randomakur1 = `${Math.floor(Math.random() * 100)}`
                                   let randomakur2 = `${Math.floor(Math.random() * 100)}`
                                   let randomakur3 = `${Math.floor(Math.random() * 100)}`
@@ -246,8 +242,6 @@ let handler = async (m, { conn,usedPrefix, command, text, args }) => {
  *🦑 = [ ${aines4} ]*			 *🐳 = [ ${aines12} ]*
  *🐙 = [ ${aines3} ]*			 *🦈 = [ ${aines9} ]*
   *🐡 = [ ${aines5} ]*			*🐋 = [ ${aines1} ]*
-  
-+1 Tiketcoin
 `.trim()
                                  global.db.data.users[m.sender].paus += rbrbsh1
                                  global.db.data.users[m.sender].kepiting += rbrbsh2
@@ -277,7 +271,7 @@ let handler = async (m, { conn,usedPrefix, command, text, args }) => {
                                  m.reply('_Sedang Memancing..._')
                                  }, 0) 
                                  user.lastmancingeasy = new Date * 1
-                                 } else conn.reply(m.chat, 'Minimal umpan kamu *200* untuk memancing level hard', m)
+                                 } else conn.reply(m.chat, 'Minimal umpan kamu *30* untuk memancing level hard', m)
                             } else conn.reply(m.chat, 'Minimal pancingan kamu *Level 4* untuk memancing level hard', m)
                        } else conn.reply(m.chat, `*Sepertinya Anda Sudah Lelah*\n*Silahkan Istirahat Sejenak Sekitar ${timerh}*\n*Untuk Bisa Melanjutkan Memancing Lagi*`, m)
                  break
@@ -288,7 +282,7 @@ let handler = async (m, { conn,usedPrefix, command, text, args }) => {
                                   if (pancingan == 0 || umpan == 0) return m.reply('*Kamu belum memiliki Pancingan dan Umpan, Silahkan beli dulu..*')
                                   if (new Date - global.db.data.users[m.sender].lastmancingeasy > 28800000) {
                                   if (global.db.data.users[m.sender].pancingan > 4) {
-                                  if (global.db.data.users[m.sender].umpan > 249) {
+                                  if (global.db.data.users[m.sender].umpan > 40) {
                                   let randomakue1 = `${Math.floor(Math.random() * 500)}`
                                   let randomakue2 = `${Math.floor(Math.random() * 500)}`
                                   let randomakue3 = `${Math.floor(Math.random() * 500)}`
@@ -338,8 +332,6 @@ let handler = async (m, { conn,usedPrefix, command, text, args }) => {
  *🦑 = [ ${ainese4} ]*			 *🐳 = [ ${ainese12} ]*
  *🐙 = [ ${ainese3} ]*			 *🦈 = [ ${ainese9} ]*
   *🐡 = [ ${ainese5} ]*			*🐋 = [ ${ainese1} ]*
-  
-+1 Tiketcoin
 `.trim()
                                  global.db.data.users[m.sender].paus += rbrbshe1
                                  global.db.data.users[m.sender].kepiting += rbrbshe2
@@ -369,7 +361,7 @@ let handler = async (m, { conn,usedPrefix, command, text, args }) => {
                                  m.reply('_Sedang Memancing..._')
                                  }, 0) 
                                  user.lastmancingeasy = new Date * 1
-                                 } else conn.reply(m.chat, 'Minimal umpan kamu *250* untuk memancing level extreme', m)
+                                 } else conn.reply(m.chat, 'Minimal umpan kamu *40* untuk memancing level extreme', m)
                             } else conn.reply(m.chat, 'Minimal pancingan kamu *Level 5* untuk memancing level extreme', m)
                        } else conn.reply(m.chat, `*Sepertinya Anda Sudah Lelah*\n*Silahkan Istirahat Sejenak Sekitar ${timere}*\n*Untuk Bisa Melanjutkan Memancing Lagi*`, m)
                  break
@@ -378,9 +370,9 @@ let handler = async (m, { conn,usedPrefix, command, text, args }) => {
                  }
 }
 
-handler.help = ['pancing <type>']
+handler.help = ['mancing <type>']
 handler.tags = ['game']
-handler.command = /^(pancing)$/i
+handler.command = /^(mancing)$/i
 handler.register = true
 handler.limit = true
 

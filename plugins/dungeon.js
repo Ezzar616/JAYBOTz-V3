@@ -67,8 +67,8 @@ async function handler(m, { conn, usedPrefix, command, text }) {
         if (room.game.player1 && room.game.player2 && room.game.player3 && room.game.player4) {
 
         // Hadiah ben do seneng :v
-        room.price.money += (Math.floor(Math.random() * 1000001)) * 1
-        room.price.exp += (Math.floor(Math.random() * 500001)) * 1
+        room.price.money += (Math.floor(Math.random() * 10001)) * 1
+        room.price.exp += (Math.floor(Math.random() * 5001)) * 1
         room.price.iron += (pickRandom([0, 0, 0, 0, 1, 0, 0, 0])) * 1
         room.game.diamond += (pickRandom([0, 2, 0, 1, 0, 1, 0, 0, 3, 0, 0, 1, 2, 0, 0])) * 1
         room.game.sampah += (Math.floor(Math.random() * 101)) * 1

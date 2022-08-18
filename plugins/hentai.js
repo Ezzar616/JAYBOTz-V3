@@ -5,7 +5,7 @@ handler.help = ['hentai']
 handler.tags = ['asupan']
 
 handler.command = /^(hentai)$/i
-handler.register = true
+
 handler.premium = true
 handler.private = true
 handler.limit = 1

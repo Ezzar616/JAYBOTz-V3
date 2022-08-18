@@ -5,6 +5,6 @@ handler.help = ['delvira']
 handler.tags = ['asupan']
 
 handler.command = /^(delvira)$/i
-handler.register = true
+
 handler.limit = 1
 module.exports = handler
