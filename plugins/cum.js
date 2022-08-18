@@ -6,7 +6,7 @@ handler.tags = ['asupan']
 
 handler.command = /^(cum|cume)$/i
 handler.premium = true
-handler.register = true
+
 handler.private = true
 handler.limit = 1
 module.exports = handler

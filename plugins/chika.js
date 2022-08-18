@@ -5,6 +5,6 @@ handler.help = ['chika']
 handler.tags = ['asupan']
 
 handler.command = /^(chika)$/i
-handler.register = true
+
 handler.limit = 1
 module.exports = handler
