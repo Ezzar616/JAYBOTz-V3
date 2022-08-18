@@ -2,10 +2,10 @@ const { MessageType } = require('@adiwajshing/baileys')
 let handler = async (m, { conn, usedPrefix, owner }) => { 
     try { 
         let __timers = (new Date - global.db.data.users[m.sender].lastadventure)
-        let _timers = (3600000 - __timers) 
+        let _timers = (86400000 - __timers) 
         let timers = clockString(_timers)
         if (global.db.data.users[m.sender].health > 79) {
-            if (new Date - global.db.data.users[m.sender].lastadventure > 3600000) {
+            if (new Date - global.db.data.users[m.sender].lastadventure > 86400000) {
             let armor = global.db.data.users[m.sender].armor
             let rubah = global.db.data.users[m.sender].rubah
             let kuda = global.db.data.users[m.sender].kuda
@@ -13,8 +13,9 @@ let handler = async (m, { conn, usedPrefix, owner }) => {
             let serigala = global.db.data.users[m.sender].serigala
             let _health = `${Math.floor(Math.random() * 101)}`.trim()
             let health = (_health * 1)
-            let exp = `${Math.floor(Math.random() * 100000)}`.trim() 
-            let uang = `${Math.floor(Math.random() * 1000000)}`.trim() 
+            let exp = `${Math.floor(Math.random() * 1000)}`.trim() 
+            let uang = `${Math.floor(Math.random() * 100000000)}`.trim() 
+            let limit = `${Math.floor(Math.random() * 100)}`.trim() 
             let _potion = ['1','2','3']
             let potion = _potion[Math.floor(Math.random() * _potion.length)]
             let _sampah = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50']
@@ -37,7 +38,7 @@ let handler = async (m, { conn, usedPrefix, owner }) => {
 
             let rendem = itemrand[Math.floor(Math.random() * itemrand.length)]
             let str1 = `
-kamu sedang bekerja sebagai *${pickRandom(['Bandar Ganja', 'Bandar Sabu', 'Bandar ekstasi', 'Jaga Tokoh', 'Jualan Sepatu', 'Jualan Ginjal', 'Jualan Bayi', 'Jual Istri', 'Jual Bokin', 'Jual Pacar', 'Pemadam Kebakaran', 'Polisi', 'Pembunuh Bayaran', 'Polisi Lalu lintas', 'Developer', 'IT', 'Ngemis', 'Pencoli', 'Bandar bokep', 'Pilot', 'Mata Mata', 'Detektiv', 'Bandar Narkoba', 'Mafia Kriminal', 'Satpam', 'Pemain Bola', 'Pengangguran', 'Pembunuh berantai', 'Presiden', 'Bandar Nuclear', 'Pencuri', 'Penculik Anak', 'Tentara', 'Penjual Gorengan', 'Penjual Anak Kecil', 'Peternak', 'Petani', 'Penjual Sarung', 'Penjual Bakso Keliling', 'Nahkoda', 'Masinis', 'Penjual Tuak', 'Penjaga Bar', 'Coder', 'Artis', 'Selbriti', 'Wartawan', 'Pemain Esport', 'Youtuber', 'Vlogger', 'Chef', 'Aktor Film', 'Kameramen Film', 'Atlet Profesional', 'Penyanyi', 'Desainer', 'Pelukis', 'Kuli Bangunan', 'Bandar Bisnis', 'Ceo Perusahaan besar', 'Boss Besar', 'Dokter', 'Astronot', 'Manager Perusahaan', 'progammer', 'Guru', 'Pengacara', 'Pemburu', 'Boss Hunter'])}*
+kamu sedang bekerja sebagai *${pickRandom(['Bandar Ganja', 'Bandar Sabu', 'Bandar ekstasi', 'Jaga Tokoh', 'Jualan Sepatu', 'Jualan Ginjal', 'Jualan Bayi', 'Jual Istri', 'Jual Bokin', 'Jual Pacar', 'Pemadam Kebakaran', 'Polisi', 'Pembunuh Bayaran', 'Polisi Lalu lintas', 'Developer', 'IT', 'Ngemis', 'Pencoli', 'Bandar bokep', 'Pilot', 'Mata Mata', 'Detektiv', 'Bandar Narkoba', 'Mafia Kriminal', 'Satpam', 'Pemain Bola', 'Pengangguran', 'Pembunuh berantai', 'Presiden', 'Bandar Nuclear', 'Pencuri', 'Penculik Anak', 'Tentara', 'Penjual Gorengan', 'Penjual Anak Kecil', 'Peternak', 'Petani', 'Penjual Sarung', 'Penjual Bakso Keliling', 'Nahkoda', 'Masinis', 'Penjual Tuak', 'Penjaga Bar', 'Coder', 'Artis', 'Selbriti', 'Wartawan', 'Pemain Esport', 'Youtuber', 'Vlogger', 'Chef', 'Aktor Film', 'Kameramen Film', 'Atlet Profesional', 'Penyanyi', 'Desainer', 'Pelukis', 'Kuli Bangunan', 'Bandar Bisnis', 'Ceo Perusahaan besar', 'Boss Besar', 'Dokter', 'Astronot', 'Manager Perusahaan', 'progammer', 'Guru', 'Pengacara', 'Pemburu'])}*
 `.trim()
 
             setTimeout(() => {
@@ -56,7 +57,7 @@ kamu sedang bekerja......
 Nyawa mu berkurang -${health * 1} karena Kamu telah selesai bekerja dan kamu mendapatkan
 *exp:* ${exp} 
 *uang:* ${uang}
-*tiketcoin:* 1
+*limit:* ${limit}
 `.trim()
 
             
@@ -69,7 +70,7 @@ Nyawa mu berkurang -${health * 1} karena Kamu telah selesai bekerja dan kamu men
 					
             global.db.data.users[m.sender].health -= health * 1
             global.db.data.users[m.sender].exp += exp * 1
-            global.db.data.users[m.sender].tiketcoin += 1
+            global.db.data.users[m.sender].limit += limit * 1
             global.db.data.users[m.sender].money += uang * 1
             global.db.data.users[m.sender].potion += potion * 1
             global.db.data.users[m.sender].lastadventure = new Date * 1

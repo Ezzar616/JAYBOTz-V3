@@ -202,7 +202,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            },
                {
              quickReplyButton: {
-               displayText: '🤝 D̺͆o̺͆n̺͆a̺͆s̺͆i̺͆',
+               displayText: '🤝 D̺͆o̺͆n̺͆a̺͆s̺͆i̺͆', 
                id: '.donasi',
              }
 
@@ -210,7 +210,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            {
              quickReplyButton: {
                displayText: '📳B͓̽u͓̽y͓̽ ͓̽P͓̽r͓̽e͓̽m͓̽',
-               id: '.buyprem',
+               id: '.beliprem',
              }
            }]
          }
@@ -235,7 +235,6 @@ handler.mods = false
 handler.premium = false
 handler.group = false
 handler.private = false
-handler.register = true
 
 handler.admin = false
 handler.botAdmin = false
