@@ -5,8 +5,8 @@ handler.help = ['ass']
 handler.tags = ['nsfw']
 
 handler.command = /^(ass)$/i
+
 handler.premium = true
-handler.register = true
 handler.limit = 1
 module.exports = handler
 

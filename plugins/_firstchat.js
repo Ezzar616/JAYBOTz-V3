@@ -11,12 +11,12 @@ handler.before = async function (m) {
     let { banned } = db.data.users[m.chat]
     let username = conn.getName(m.sender) 
     if (new Date - user.pc < 86400000) return // setiap 24 jam sekali
- //   await conn.modifyChat(m.chat, 'mute', -Math.floor(new Date / 1e3) * 1e3 - 1e3).catch(console.log)
+ //   await conn.modifyChat(m.chat,'/merampok', '/membunuh', '.merampok', '.membunuh', '#merampok', '#membunuh', '$merampok', '$membunuh', 'Merampok', 'Membunuh'(new Date / 1e3) * 1e3 - 1e3).catch(console.log)
     await this.sendButton(m.chat, `
 Hai ${ucapan()} *${username.replace(/@.+/, '')}* 👋
 
 ${banned ? `kamu *terbanned* kak 😕\nHubungi: wa.me/${owner[0]}` : 'Ada yang bisa saya bantu?'}
-`.trim(), wm, null, [['Menu', '/menu']], m)
+`.trim(), wm, null, [['/merampok', '/membunuh', '.merampok', '.membunuh', '#merampok', '#membunuh', '$merampok', '$membunuh', 'Merampok', 'Membunuh']], m)
     user.pc = new Date * 1
 }
 

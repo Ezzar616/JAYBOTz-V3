@@ -5,6 +5,6 @@ handler.help = ['aura']
 handler.tags = ['asupan']
 
 handler.command = /^(aura)$/i
-handler.register = true
+
 handler.limit = 1
 module.exports = handler

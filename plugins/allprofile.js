@@ -244,6 +244,7 @@ Serigala: *${serigala == 0 ? 'Tidak Punya' : '' || serigala == 1 ? 'Level 1' : '
 handler.help = ['allprofile [@user]']
 handler.tags = ['info']
 handler.command = /^allprofile$/i
+
 handler.limit = true
 handler.register = false
 

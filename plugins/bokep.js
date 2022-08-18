@@ -5,8 +5,8 @@ handler.help = ['bokep']
 handler.tags = ['asupan']
 
 handler.command = /^(bokep)$/i
+
 handler.premium = true
-handler.register = true
 handler.private = true
 handler.limit = 1
 module.exports = handler

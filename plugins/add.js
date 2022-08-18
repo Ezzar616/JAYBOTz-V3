@@ -56,13 +56,13 @@ handler.help = ['add', '+'].map(v => v + ' @user')
 handler.tags = ['group']
 handler.command = /^(add|\+)$/i
 
-handler.owner = true
+handler.owner = false
 handler.mods = false
 handler.premium = false
 handler.group = true
 handler.private = false
 
-handler.admin = false
+handler.admin = true
 handler.botAdmin = true
 
 handler.fail = null

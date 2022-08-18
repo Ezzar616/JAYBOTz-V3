@@ -23,18 +23,18 @@ const roles = {
   */
   'Beginner': 0, 
   'Early Soldier': 5,
-  'Commander': 10,
-  'Initial Commander' 15,
-  'Commander Elite': 20,
-  'Initial Commander Elit': 25,
-  'Commander Elite Hero': 30,
-  'The Commander Elite Super Strong Hero': 40,
-  'The Commander Elite Super Strong Shadow Hero': 50,
-  'The Commander Legends Shadow Hero': 60,
-  'The Commander Super Legends Shadow Hero': 70,
-  'The Commander Super Legends Shadow Hero': 80,
-  'The Strongest Legend': 90,
-  'The Hero Of The Legend\'s Strongest': 100
+  'Commander': 20,
+  'Initial Commander' 30,
+  'Commander Elite': 40,
+  'Initial Commander Elit': 50,
+  'Commander Elite Hero': 60,
+  'The Commander Elite Super Strong Hero': 80,
+  'The Commander Elite Super Strong Shadow Hero': 100,
+  'The Commander Legends Shadow Hero': 150,
+  'The Commander Super Legends Shadow Hero': 200,
+  'The Commander Super Legends Shadow Hero': 300,
+  'The Strongest Legend': 400,
+  'The Hero Of The Legend\'s Strongest': 500
 }
 
 module.exports = {
