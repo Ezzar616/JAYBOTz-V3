@@ -1,108 +1,110 @@
 
-const potion = 20000
+const potion = 200000
 const Spotion = 100 
-const Bdiamond = 100000
-const Sdiamond = 1000
-const Bcommon = 100000
-const Scommon = 1000
+const Bdiamond = 1000000
+const Sdiamond = 100
+const Bcommon = 1000000
+const Scommon = 100
 const Suncommon = 100
-const Buncommon = 100000
-const Bmythic = 100000
-const Smythic = 1000
-const Blegendary = 200000
-const Slegendary = 5000
+const Buncommon = 1000000
+const Bmythic = 1000000
+const Smythic = 100
+const Blegendary = 2000000
+const Slegendary = 500
 const Bsampah = 120
-const Ssampah = 5
-const Bkayu = 1000
-const Skayu = 400
-const Bbotol = 300
+const Ssampah = 50
+const Bkayu = 10000
+const Skayu = 40
+const Bbotol = 3000
 const Sbotol = 50
-const Bkaleng = 400
-const Skaleng = 100
-const Bkardus = 400
+const Bkaleng = 4000
+const Skaleng = 10
+const Bkardus = 4000
 const Skardus = 50
-const Bpisang = 5500
-const Spisang = 100
-const Bmangga = 4600
-const Smangga = 150
-const Bjeruk = 6000
-const Sjeruk = 300
-const Banggur = 5500
-const Sanggur = 150
-const Bapel = 5500
-const Sapel = 400
-const Bbibitpisang = 550
+const Bpisang = 55000
+const Spisang = 10
+const Bmangga = 46000
+const Smangga = 15
+const Bjeruk = 60000
+const Sjeruk = 30
+const Banggur = 55000
+const Sanggur = 15
+const Bapel = 55000
+const Sapel = 40
+const Bbibitpisang = 5500
 const Sbibitpisang = 50
-const Bbibitmangga = 550
+const Bbibitmangga = 5500
 const Sbibitmangga = 50
-const Bbibitjeruk = 550
+const Bbibitjeruk = 5500
 const Sbibitjeruk = 50
-const Bbibitanggur = 550
+const Bbibitanggur = 5500
 const Sbibitanggur = 50
-const Bbibitapel = 550
+const Bbibitapel = 5500
 const Sbibitapel = 50
-const Bgardenboxs = 65000
-const Sgardenboc = 350000
-const Bberlian = 150000
-const Sberlian = 10000
-const Bemasbatang = 250000
-const Semasbatang = 10000
-const Bemasbiasa = 150000
-const Semasbiasa = 15000
+const Bgardenboxs = 650000
+const Sgardenboc = 350
+const Bberlian = 1500000
+const Sberlian = 100
+const Bemasbatang = 2500000
+const Semasbatang = 100
+const Bemasbiasa = 1500000
+const Semasbiasa = 150
 const Bphonix = 1000000000
-const Sphonix = 1000000
+const Sphonix = 100
 const Bgriffin = 100000000
-const Sgriffin = 100000
+const Sgriffin = 100
 const Bkyubi = 100000000
-const Skyubi = 100000
+const Skyubi = 100
 const Bnaga = 100000000
-const Snaga = 100000
+const Snaga = 100
 const Bcentaur = 100000000
-const Scentaur = 100000
+const Scentaur = 100
 const Bkuda = 50000000
-const Skuda = 100000
+const Skuda = 100
 const Brubah = 100000000
-const Srubah = 100000
+const Srubah = 100
 const Bkucing = 5000000
-const Skucing = 50000
+const Skucing = 500
 const Bserigala = 50000000
-const Sserigala = 500000
+const Sserigala = 500
 const Bmakananpet = 50000
-const Smakananpet = 500
-const Bmakananphonix = 80000
-const Smakananphonix = 5000
-const Bmakanangriffin = 80000
-const Smakanangriffin = 5000
-const Bmakanannaga = 150000
-const Smakanannaga = 10000
-const Bmakanankyubi = 150000
-const Smakanankyubi = 10000
-const Bmakanancentaur = 150000
-const Smakanancentaur = 10000
-const Bhealtmonster = 20000
-const Bpet = 150000
+const Smakananpet = 50
+const Bmakananphonix = 8000
+const Smakananphonix = 50
+const Bmakanangriffin = 8000
+const Smakanangriffin = 50
+const Bmakanannaga = 15000
+const Smakanannaga = 100
+const Bmakanankyubi = 15000
+const Smakanankyubi = 100
+const Bmakanancentaur = 15000
+const Smakanancentaur = 100
+const Bhealtmonster = 2000000
+const Bpet = 15000000
 const Spet = 1000
-const Blimit = 25000
-const Slimit = 20
-const Bexp = 550
-const Baqua = 5000
-const Saqua = 1000
-const Biron = 20000
-const Siron = 5000
-const Bstring = 50000
-const Sstring = 5000
+const Blimit = 2500000
+const Slimit = 1000
+const Bexp = 5500000
+const Baqua = 50000
+const Saqua = 100
+const Biron = 200000
+const Siron = 500
+const Bstring = 500000
+const Sstring = 500
+const Barmor = 150000
+const Sarmor = 150
 const Bsword = 150000
-const Ssword = 15000
-const Bumpan = 1500
+const Ssword = 150
+const Bumpan = 150000
 const Sumpan = 100
 const Bpancingan = 5000000
-const Spancingan = 500000
-const Bbatu = 500
+const Spancingan = 500
+const Bbatu = 50000
 const Sbatu = 100
-const Bketake = 15
+const Bketake = 1500
 const Btiketcoin = 500
-const Bkoinexpg = 500000
-const Beleksirb = 500
+const Bkoinexpg = 5000000
+const Beleksirb = 50000
 let handler  = async (m, { conn, command, args, usedPrefix, owner }) => {
     const _armor = global.db.data.users[m.sender].armor
     const armor = (_armor == 0 ? 20000 : '' || _armor == 1 ? 49999 : '' || _armor == 2 ? 99999 : '' || _armor == 3 ? 149999 : '' || _armor == 4 ? 299999 : '')
@@ -140,7 +142,7 @@ Uncommon:  ${Buncommon}
 Mythic:     ${Bmythic}
 Legendary: ${Blegendary}
 Sampah:     ${Bsampah}
-Armor:       ${armor}
+Armor:       ${Barmor}
 String:       ${Bstring}
 Iron:       ${Biron}
 Sword:       ${Bsword}
@@ -162,6 +164,7 @@ Legendary: ${Slegendary}
 Sampah:     ${Ssampah}
 String:       ${Sstring}
 Iron:       ${Siron}
+Armor:       ${Sarmor}
 Sword:       ${Ssword}
 Batu:       ${Sbatu}
 Botol:       ${Sbotol}
@@ -568,12 +571,11 @@ Umpan:       ${Bumpan}
                         
                         break
                     case 'armor':
-                            if (global.db.data.users[m.sender].armor == 5) return conn.reply(m.chat, 'Armormu sudah *Level Max*', m)
-                            if (global.db.data.users[m.sender].money > armor) {
-                                global.db.data.users[m.sender].armor += 1
-                                global.db.data.users[m.sender].money -= armor * 1
-                                conn.reply(m.chat, `Succes membeli armor seharga ${armor} money` ,m)
-                            } else conn.reply(m.chat, `uang mu tidak cukup untuk membeli armor seharga ${armor} money`, m)
+                            if (global.db.data.users[m.sender].money >= Barmor * count) {
+                                global.db.data.users[m.sender].armor += count * 1
+                                global.db.data.users[m.sender].money -= Barmor * count
+                                conn.reply(m.chat, `Succes membeli ${count} Armor dengan harga ${Barmor * count} money`, m)
+                            } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} armor dengan harga ${Barmor * count} money`.trim(), m)
                         
                         break
                     default:
@@ -588,6 +590,13 @@ Umpan:       ${Bumpan}
                             global.db.data.users[m.sender].potion -= count * 1
                             conn.reply(m.chat, `Succes menjual ${count} Potion dengan harga ${Spotion * count} money`.trim(), m)
                         } else conn.reply(m.chat, `Potion kamu tidak cukup`.trim(), m)
+                        break
+                    case 'armor':
+                        if (global.db.data.users[m.sender].armor >= count * 1) {
+                            global.db.data.users[m.sender].money += Sarmor * count
+                            global.db.data.users[m.sender].armor -= count * 1
+                            conn.reply(m.chat, `Succes menjual ${count} Armor dengan harga ${Sarmor * count} money`.trim(), m)
+                        } else conn.reply(m.chat, `Armor kamu tidak cukup`.trim(), m)
                         break
                     case 'common':
                         if (global.db.data.users[m.sender].common >= count * 1) {
@@ -1168,16 +1177,14 @@ Umpan:       ${Bumpan}
                             } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} pancingan dengan harga ${Bpancingan * count} money`.trim(), m)
                         
                         break
-                case 'armor':
-                        if (global.db.data.users[m.sender].armor == 5) return conn.reply(m.chat, 'Armormu sudah *Level Max*', m)
-                        if (global.db.data.users[m.sender].money > armor * 1) {
-                            global.db.data.users[m.sender].armor += 1
-                            global.db.data.users[m.sender].money -= armor * 1
-                            conn.reply(m.chat, `Succes membeli armor seharga ${armor} money` ,m)
-                          
-                        } else conn.reply(m.chat, `uang mu tidak cukup untuk membeli armor seharga ${armor} money`, m)
-                    
-                    break
+                    case 'armor':
+                            if (global.db.data.users[m.sender].money >= armor * count) {
+                                global.db.data.users[m.sender].armor += count * 1
+                                global.db.data.users[m.sender].money -= Barmor * count
+                                conn.reply(m.chat, `Succes membeli ${count} Armor dengan harga ${Barmor * count} money`, m)
+                            } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} armor dengan harga ${Barmor * count} money`.trim(), m)
+                        
+                        break
                 default:
                     return conn.reply(m.chat, Kchat, m)
             }
@@ -1421,7 +1428,7 @@ Umpan:       ${Bumpan}
 handler.help = ['shop <sell|buy> <args>']
 handler.tags = ['rpg']
     
-handler.command = /^(shop|toko|buy|beli|sell|jual)$/i
+handler.command = /^(shop|toko|buy|sell)$/i
 handler.limit = true
 handler.group = true
 module.exports = handler

@@ -55,8 +55,8 @@ let message = await prepareWAMessageMedia({ image: {url: 'https://f.top4top.io/p
      )
 }
 
-handler.help = ['buyprem']
+handler.help = ['beliprem']
 handler.tags = ['donasi']
-handler.command = /^buyprem$/i
+handler.command = /^beliprem$/i
 
 module.exports = handler

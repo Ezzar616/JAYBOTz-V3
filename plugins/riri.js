@@ -5,6 +5,6 @@ handler.help = ['riri']
 handler.tags = ['asupan']
 
 handler.command = /^(riri)$/i
-handler.register = true
+
 handler.limit = 1
 module.exports = handler
