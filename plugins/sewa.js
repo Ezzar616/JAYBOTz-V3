@@ -2,23 +2,13 @@ const { default: makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessa
 let handler = async (m) => {
 let sewa = `*────── 「 LIST SEWA 」 ──────*
 
-Hai 👋
-𝐈𝐧𝐢 𝐥𝐢𝐬𝐭 𝐬𝐞𝐰𝐚 𝐤𝐚𝐦𝐢 𝐬𝐢𝐥𝐚𝐡𝐤𝐚𝐧 𝐝𝐢𝐩𝐢𝐥𝐢𝐡
+*Sewa Bot Gratis selama bulan agustus ini*
 
-┏━━━•❅•°•❈〔 𝐋𝐢𝐬𝐭 𝐒𝐞𝐰𝐚 〕
-┣★ミ Premium : 5k/Bulan
-┣★ミ Premium : 10k/2bulan
-┣➲ Scan Barcod Qrisnya diatas🤗
-┗━━━•❅•°•❈
+Donasi? scan qr atas
 
-┏━━━•❅•°•❈𝐊𝐞𝐮𝐧𝐭𝐮𝐧𝐠𝐚𝐧 𝐌𝐞𝐦𝐛𝐞𝐫 𝐏𝐫𝐞𝐦𝐢𝐮𝐦
-┣➲ Unlock Fitur Premium
-┣➲ limit didapat tiap hari dengan claim
-┣➲ bisa invite bot ke grup
-┗━━━•❅•°•❈
 Contact person Owner:
-wa.me/6285162778904 (Owner)`
-let message = await prepareWAMessageMedia({ image: {url: 'https://f.top4top.io/p_2410vt78j1.jpg' }}, { upload: conn.waUploadToServer })
+wa.me/6287853163532 (Owner)`
+let message = await prepareWAMessageMedia({ image: {url: 'https://telegra.ph/file/6d9776710aa512adf8742.jpg' }}, { upload: conn.waUploadToServer })
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
          hydratedTemplate: {
@@ -27,22 +17,22 @@ let message = await prepareWAMessageMedia({ image: {url: 'https://f.top4top.io/p
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: '🏧 Group Bot',
-               url: 'https://chat.whatsapp.com/GRigRq6LkoMDR7HOwkQAIO'
+               displayText: '🗿',
+               url: '🗿'
              }
 
            },
                {
              callButton: {
-               displayText: 'Kontak Owner',
-               phoneNumber: '+62 851-6277-8904'
+               displayText: 'ovo',
+               phoneNumber: '+62 878-5316-3532'
              }
            },           
                {
              quickReplyButton: {
-               displayText: '🧒 Owner',
-               id: '.owner',
-             },
+               displayText: 'Y',
+               id: 'k',
+             }
 
            }]
          }
@@ -55,8 +45,8 @@ let message = await prepareWAMessageMedia({ image: {url: 'https://f.top4top.io/p
      )
 }
 
-handler.help = ['beliprem']
+handler.help = ['sewa']
 handler.tags = ['donasi']
-handler.command = /^beliprem$/i
+handler.command = /^sewa$/i
 
 module.exports = handler
