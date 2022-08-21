@@ -1,4 +1,4 @@
-/*let moment = require('moment-timezone')
+let moment = require('moment-timezone')
 let handler = m => m
 
 handler.before = async function (m) {
@@ -11,12 +11,12 @@ handler.before = async function (m) {
     let { banned } = db.data.users[m.chat]
     let username = conn.getName(m.sender) 
     if (new Date - user.pc < 86400000) return // setiap 24 jam sekali
- //   await conn.modifyChat(m.chat,'/merampok', '/membunuh', '.merampok', '.membunuh', '#merampok', '#membunuh', '$merampok', '$membunuh', 'Merampok', 'Membunuh'(new Date / 1e3) * 1e3 - 1e3).catch(console.log)
+ //   await conn.modifyChat(m.chat, 'mute', -Math.floor(new Date / 1e3) * 1e3 - 1e3).catch(console.log)
     await this.sendButton(m.chat, `
 Hai ${ucapan()} *${username.replace(/@.+/, '')}* 👋
 
-${banned ? `kamu *terbanned* kak 😕\nHubungi: wa.me/${owner[0]}` : 'Ada yang bisa saya bantu?'}
-`.trim(), wm, null, [['/merampok', '/membunuh', '.merampok', '.membunuh', '#merampok', '#membunuh', '$merampok', '$membunuh', 'Merampok', 'Membunuh']], m)
+${banned ? `kamu *terbanned* kak 😕\nHubungi: wa.me/${owner[0]}` : 'Ada yang bisa saya bantu?, aku adalah bot WhatsApp, yang membantu anda untuk kepentingan di group, dan ada juga pemainnya loh...  *aku bukan manusia, tapi robot* | *aku tidak akan mengambil data data kalian artinya privasi aman* | *jangan kirim virtex, telepon, atau anda akan di blockir bot*'}
+`.trim(), wm, null, [['Menu', '/menu']], m)
     user.pc = new Date * 1
 }
 

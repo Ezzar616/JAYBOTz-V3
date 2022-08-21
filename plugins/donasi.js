@@ -1,35 +1,28 @@
 const { default: makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, downloadContentFromMessage, downloadHistory, proto, getMessage, generateWAMessageContent, prepareWAMessageMedia } = require('@adiwajshing/baileys')
 let handler = async (m) => {
-let sewa = `*────── 「 DONASI 」 ──────*
+let duit = `*────── 「 DONATE 」 ──────*
 
-Hai 👋 𝘆𝘂𝗸 𝗯𝗮𝗻𝘁𝘂 𝗯𝗼𝘁 𝗱𝗲𝗻𝗴𝗮𝗻 𝗱𝗼𝗻𝗮𝘀𝗶
-┏━━━•❅•°•❈〔 𝗱𝗼𝗻𝗮𝘀𝗶 〕
-┣➲ Scan Barcod Qrisnya diatas🤗
-┗━━━•❅•°•❈
+Hai 👋
+Kalian bisa mendukung saya agar bot ini tetap up to date dengan:
+
+┌〔 Donasi • Emoney 〕
+├🔃 Scan Barcod Qrisnya diatas🤗
+└────
+
+Berapapun donasi kalian akan sangat berarti 👍
+𝐀𝐫𝐢𝐠𝐚𝐭𝐨𝐮!!!
+
 Contact person Owner:
-wa.me/6285162778904 (Owner)`
-let message = await prepareWAMessageMedia({ image: {url: 'https://f.top4top.io/p_2410vt78j1.jpg' }}, { upload: conn.waUploadToServer })
+wa.me/6287853163532 (Owner)`
+let message = await prepareWAMessageMedia({ image: {url: 'https://telegra.ph/file/6d9776710aa512adf8742.jpg' }}, { upload: conn.waUploadToServer })
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
          hydratedTemplate: {
            imageMessage: message.imageMessage,
-           hydratedContentText: sewa,
+           hydratedContentText: duit,
            hydratedFooterText: wm,
            hydratedButtons: [{
-             urlButton: {
-               displayText: '🏧 Group Bot',
-               url: 'https://chat.whatsapp.com/GRigRq6LkoMDR7HOwkQAIO'
-             }
-
-           },
-               {
-             callButton: {
-               displayText: 'Dana',
-               phoneNumber: '+62 851-6277-8904'
-             }
-           },           
-               {
-             quickReplyButton: {
+               quickReplyButton: {
                displayText: '🧒 Owner',
                id: '.owner',
              }
@@ -38,6 +31,7 @@ let message = await prepareWAMessageMedia({ image: {url: 'https://f.top4top.io/p
          }
        }
      }), { userJid: m.sender, quoted: m });
+    //conn.reply(m.chat, text.trim(), m)
     return await conn.relayMessage(
          m.chat,
          template.message,
@@ -46,7 +40,7 @@ let message = await prepareWAMessageMedia({ image: {url: 'https://f.top4top.io/p
 }
 
 handler.help = ['donasi']
-handler.tags = ['donasi']
-handler.command = /^donasi$/i
+handler.tags = ['info']
+handler.command = /^dona(te|si)|bagiduit$/i
 
 module.exports = handler

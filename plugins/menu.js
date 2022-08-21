@@ -35,10 +35,6 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-╔═══╗ ♪
-║███║ ♫.        🅼🅴🅽🆄 🅱︎🅾︎🆃
-║ (●) ♫.       🅱︎🆈 🅹🅰🆈🅱🅾🆃🆉▶️
-╚═══╝♪♪
 ❂═══❖•ೋ•:･ﾟ✧:･ﾟ✧
 ╟ꂑ 𝐻𝑎𝑖, %ucapan %name! 👋
 ┗━━━•❅•°•❈
@@ -51,7 +47,7 @@ const defaultMenu = {
 ╟📅*𝐓𝐚𝐧𝐠𝐠𝐚𝐥:* %date
 ╟🕔*𝐔𝐩𝐭𝐢𝐦𝐞:* %uptime (%muptime)
 ╟👨‍👨‍👧‍👧*𝐒𝐚𝐫𝐚𝐧𝐠𝐁𝐨𝐭:*
-╟ https://chat.whatsapp.com/GRigRq6LkoMDR7HOwkQAIO
+╟https://chat.whatsapp.com/G8B0XjVJkSVDDVOLw7qSxm
 ╚»★★ミ✧･ﾟ: ✧ﾟ･:
 
 
@@ -62,9 +58,7 @@ const defaultMenu = {
   header: '⃝▣──「 %category 」───⬣',
   body: '│ ○ %cmd %islimit %isPremium',
   footer: '▣────────────⬣\n',
-  after: `*Recode by*
-*%npmname* | %version
-${'```%npmdesc```'}
+  after: `makasihh
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
@@ -180,16 +174,16 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            hydratedContentText: text.trim(),
            hydratedFooterText: wm,
            hydratedButtons: [{
-             urlButton: {
-               displayText: '✏️ S̺͆o̺͆u̺͆r̺͆c̺͆e̺͆ C̺͆o̺͆d̺͆e̺͆',
-               url: 'https://linkr.bio/JAYBOTz'
+             quickReplyButton: {
+               displayText: 'Infobot',
+               id: '.stats',
              }
 
            },
              {
              callButton: {
-               displayText: 'H̺͆p̺͆ O̺͆w̺͆n̺͆e̺͆r̺͆',
-               PhoneNumber: '0851-6277-8904'
+               displayText: 'ezzar be like ☝️😅',
+               PhoneNumber: '666-666-666'
              }
 
            },
@@ -202,15 +196,15 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            },
                {
              quickReplyButton: {
-               displayText: '🤝 D̺͆o̺͆n̺͆a̺͆s̺͆i̺͆', 
+               displayText: '🤝 D̺͆o̺͆n̺͆a̺͆s̺͆i̺͆',
                id: '.donasi',
              }
 
            },
            {
              quickReplyButton: {
-               displayText: '📳B͓̽u͓̽y͓̽ ͓̽P͓̽r͓̽e͓̽m͓̽',
-               id: '.beliprem',
+               displayText: '📳S̺͆e̺͆w̺͆a̺͆ B̺͆o̺͆t̺͆',
+               id: '.sc',
              }
            }]
          }
@@ -229,7 +223,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
 }
 handler.help = ['menu']
 handler.tags = ['main']
-handler.command = /^(menu|help)$/i
+handler.command = /^(menu)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
