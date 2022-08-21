@@ -15,6 +15,7 @@ module.exports = {
         this.pushMessage(chatUpdate.messages).catch(console.error)
         // if (!(chatUpdate.type === 'notify' || chatUpdate.type === 'append')) return
         let m = chatUpdate.messages[chatUpdate.messages.length - 1]
+        
         if (!m) return
         // console.log(m)
         try {
@@ -29,7 +30,7 @@ module.exports = {
                 if (user) {
                     if (!isNumber(user.exp)) user.exp = 0
                     if (!isNumber(user.limit)) user.limit = 1000
-                    if (!isNumber(user.joinlimit)) user.joinlimit = 9999999
+                    if (!isNumber(user.joinlimit)) user.joinlimit = 1
                     if (!isNumber(user.money)) user.money = 100000
                     if (!isNumber(user.bank)) user.bank = 100000
                     if (!isNumber(user.lastclaim)) user.lastclaim = 0
@@ -43,11 +44,9 @@ module.exports = {
                     if (!('afkReason' in user)) user.afkReason = ''
                     if (!('pasangan' in user)) user.pasangan = ''
                     if (!('banned' in user)) user.banned = false
-                    if (!('penjara' in user)) user.penjara = false
                     if (!('premium' in user)) user.premium = false
                     if (!isNumber(user.premiumDate)) user.premiumDate = 0
                     if (!isNumber(user.bannedDate)) user.bannedDate = 0
-                    if (!isNumber(user.penjaraDate)) user.penjaraDate = 0
                     if (!isNumber(user.warn)) user.warn = 0
                     if (!isNumber(user.level)) user.level = 0
                     if (!('role' in user)) user.role = 'Beginner'
@@ -521,35 +520,35 @@ module.exports = {
                 if (chat) {
                     if (!('isBanned' in chat)) chat.isBanned = false
                     if (!('welcome' in chat)) chat.welcome = true
-                    if (!('detect' in chat)) chat.detect = true
+                    if (!('detect' in chat)) chat.detect = false
                     if (!('sWelcome' in chat)) chat.sWelcome = ''
                     if (!('sBye' in chat)) chat.sBye = ''
                     if (!('sPromote' in chat)) chat.sPromote = ''
                     if (!('sDemote' in chat)) chat.sDemote = ''
                     if (!('delete' in chat)) chat.delete = true
                     if (!('antiVirtex' in chat)) chat.antiVirtex = false
-                    if (!('antiLink' in chat)) chat.antiLink = true
+                    if (!('antiLink' in chat)) chat.antiLink = false
                     if (!('badword' in chat)) chat.badword = false
-                    if (!('antiSpam' in chat)) chat.antiSpam = true
+                    if (!('antiSpam' in chat)) chat.antiSpam = false
                     if (!('antiSticker' in chat)) chat.antiSticker = false
                     if (!('stiker' in chat)) chat.stiker = false
-                    if (!('viewonce' in chat)) chat.viewonce = true
+                    if (!('viewonce' in chat)) chat.viewonce = false
                     if (!('useDocument' in chat)) chat.useDocument = false
                     if (!('antiToxic' in chat)) chat.antiToxic = false
                     if (!isNumber(chat.expired)) chat.expired = 0
                 } else global.db.data.chats[m.chat] = {
                     isBanned: false,
-                    welcome: true,
-                    detect: true,
+                    welcome: false,
+                    detect: false,
                     sWelcome: '',
                     sBye: '',
                     sPromote: '',
                     sDemote: '',
                     delete: true,
-                    antiLink: true,
+                    antiLink: false,
                     stiker: false,
                     antiSticker: false,
-                    viewonce: true,
+                    viewonce: false,
                     useDocument: false,
                     antiToxic: false,
                     expired: 0,
@@ -870,7 +869,7 @@ let { url, title, thumbnail, duration, medias } = result
 let quality = args[1] ? args[1] : '360p'                
 let media = medias.filter(v => v.videoAvailable == true && v.audioAvailable == false && v.quality == quality).map(v => v)
 if (media[0].formattedSize.split('MB')[0] >= 100.00) return m.reply('File Melebihi Batas'+util.format(media))
-iqbl.sendImage(m.chat, thumbnail, `*YOUTUBE MP4*\n\n*â€¢Title : ${title}*\n*â€¢File Size : ${media[0].formattedSize}*\n*â€¢Url : ${url}*\n*â€¢Ext : MP4*\n*â€¢Resolusi : ${args[1] || '360p'}*\n\n*_Wait Minute Video Is Sending_*`, m)
+iqbl.sendImage(m.chat, thumbnail, `*YOUTUBE MP4*\n\n*•Title : ${title}*\n*•File Size : ${media[0].formattedSize}*\n*•Url : ${url}*\n*•Ext : MP4*\n*•Resolusi : ${args[1] || '360p'}*\n\n*_Wait Minute Video Is Sending_*`, m)
 iqbl.sendMessage(m.chat, { video: { url: media[0].url }, fileName: `${title}.mp4`, mimetype: 'video/mp4' }, { quoted: m })
 }
             break
@@ -971,7 +970,7 @@ global.dfail = (type, m, conn) => {
         rowner: 'Perintah ini hanya dapat digunakan oleh _*OWWNER!1!1!*_',
         owner: 'Perintah ini hanya dapat digunakan oleh _*Owner Bot*_!',
         mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
-        premium: '*Undang Bot+Premium\n\nKetik .owner kalau minat..', 
+        premium: '*Undang Bot+Premium*\n1 Bulan *Rp10.000*\n2bulan *Rp15.000*\n\nKetik .sewa kalau minat..', 
         banned: 'Perintah ini hanya untuk pengguna yang terbanned..',
         group: 'Perintah ini hanya dapat digunakan di grup!',
         private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
