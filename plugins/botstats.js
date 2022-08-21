@@ -1,6 +1,5 @@
 let handler = async (m, { conn }) => {
-    let { anon, anticall, backup, jadibot, groupOnly, epe, tag, self } = global.db.data.settings[conn.user.jid]
-
+    
     const chats = Object.keys(await conn.chats)
     const groups = Object.keys(await conn.groupFetchAllParticipating())
     const block = await conn.fetchBlocklist()
@@ -18,16 +17,6 @@ let handler = async (m, { conn }) => {
 │⬡ ${block == undefined ? '*0* Diblokir' : '*' + block.length + '* Diblokir'}
 │⬡ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
 │⬡ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
-┗────────⬣
-
-┏──『 Pengaturan 』──⬣
-│⬡ ${anon ? '✅' : '❌'} *Anon Chat*
-│⬡ ${anticall ? '✅' : '❌'} *Anti Call*
-│⬡ ${backup ? '✅' : '❌'} *Auto Backup DB*
-│⬡ ${groupOnly ? '✅' : '❌'} *Mode Grup*
-│⬡ ${jadibot ? '✅' : '❌'} *Jadi Bot*
-│⬡ ${tag ? '✅' : '❌'} *Anti Tag Owner*
-│⬡ ${self ? '✅' : '❌'} *Mode Self*
 ┗────────⬣
     `.trim())
 }
